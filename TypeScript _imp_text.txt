@@ -1,0 +1,10 @@
+tsc -v
+tsc script.ts
+
+tsc --init      // tsc json file create
+
+tscconfig.json  file open kore
+    "outDir": "./output", 
+    "rootDir": "./src",  
+
+tsc -w          // watch mode , auto compile

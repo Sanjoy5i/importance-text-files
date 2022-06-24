@@ -1,0 +1,85 @@
+step
+====
+
+1. node install
+2. npm install
+3. if error : ( npm cache clean --force ) and (npm i npm@latest -g)
+4. react install global ( npm install -g create-react-app ) 
+5. react app install  ( npx create-react-app my-app , cd my-app , npm start )
+6. vs code install
+7. react extention pack ( react extention pack )
+8. react app build ( cd my-app , npm run build )
+
+extra:
+
+npm -g list
+npm uninstall -g create-react-app
+npm cache verify
+npm cache clean --force
+npx clear-npx-cache
+npm install npm@latest -g
+npm install -g create-react-app
+create-react-app --version
+npx create-react-app my-app 
+
+npm uninstall -g yarn
+npm install --global yarn
+yarn global remove create-react-app
+yarn global add create-react-app
+yarn create react-app my-app
+
+
+For Linux-mint - 
+    sudo apt install nodejs
+    sudo apt install npm
+    npx create-react-app my-app
+    cd my-app
+    npm start
+
+===== Modules use ===
+
+npm install --save bootstrap@4.0.0		// import similar to css
+
+=====
+import React from 'react';
+import ReactDOM from 'react-dom';
+
+const tStyle={
+  color:"yellow",
+  backgroundColor:"green"
+}
+
+var jsVariable= "How";
+
+ReactDOM.render(
+  <div>
+    <h1 style={{color:"green"}}>Todo_App</h1>
+    <h1 style={tstyle}>Todo_App</h1>
+    <h1>{jsVariable +""+ nextVariable}</h1>
+  </div>,
+  document.getElementById('root')
+);
+
+
+
+----------------
+
+Extention :
+	VS Extention > ES7 React/Redux/GraphQL/React-Native snippets
+	Google Crome > React Developer Tool
+
+
+Learning :
+	React Component
+	Props and Destructuring
+	Mapping data to Component
+	Class Component
+	Developer tools and Extention
+	state,setState and event handle
+	Conditional Rendering
+	Event Handler | onChange
+	Event handler binding
+	Hooks | useState()
+	Form | controlled component
+	useState with Objects
+	Coding Standard in Softwore

@@ -1,0 +1,25 @@
+1. cd Lesson-1
+2. npm init
+3. npm install express nodemon              // express , nodemon is external module
+
+4. package.json modify :- "start":"nodemon index.js" include of "scripts"
+
+5. Lesson-1>npm start               // Server start
+
+6. postman app use                  // Api test
+
+
+npm install body-parser             // module use is body data use 
+npm install dotenv                  // module use is  .env file use
+
+
+
+ .env  // environment  // Select / hidden file only you can use
+ require('dotenv').config();            //
+ const PORT=process.env.PORT || 3000;
+
+
+MiddleWare function use             //  Lesson-4
+
+
+ 

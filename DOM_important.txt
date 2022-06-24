@@ -1,0 +1,5 @@
+
+// Everything is object
+
+mouseenter // only he
+mouseover  // he and child

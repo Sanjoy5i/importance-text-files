@@ -1,0 +1,77 @@
+Object and Array is very important for json
+- json data validator
+- json path
+- json schema
+
+
+// Objects
+
+{
+	key:"stringValue",
+	key:"stringValue"
+}
+
+{
+	key:'stringValue',
+	key:'stringValue'
+}
+
+
+
+// json
+
+{
+	"key":"stringValue",
+	"key":"stringValue"
+}
+
+
+===================
+
+
+file name : data.json
+---------------------
+
+{
+	"friends": [
+		{
+			"name": "Sanjoy",
+			"age": 25
+		},
+		{
+			"name": "Sanjoy",
+			"age": 25,
+			"language": [
+				"Bangla",
+				"English"
+			]
+		}
+	]
+}
+
+index.js
+----------
+
+const data=require("./data");	// require data.json file
+
+console.log(data.firends[0].name);
+
+data.friends[0].name="Amit";	// modify
+
+delete data.friends[0].name;	// delete
+
+console.log(data);				// all json data print
+
+
+
+===============================================
+
+for(x in data){
+	console.log(x);
+	console.log(data[x]);
+}
+
+===================================
+
+convert into json formet : JSON.stringify(js_object)
+convert into js object : JSON.parse(json_data)

@@ -1,0 +1,73 @@
+///======== MongoDB environment ==========
+
+1. mongodb install
+2. mongodb compass install
+
+C:\Program Files\MongoDB\Server\4.4\bin>mongod          // mongoDB server run 1st command
+C:\Program Files\MongoDB\Server\4.4\bin>mongo           // mongoDB server run 2nd command
+
+connecting to: mongodb://127.0.0.1:27017/
+               mongodb://127.0.0.1:27017/         // Copy for compas connection string
+
+npm install mongoose
+const mongoose = require("mongoose");           // use for MERN
+
+
+&& OR &&
+
+ cmd
+ "C:\Program Files\MongoDB\Server\5.0\bin\mongo.exe" --version
+
+ // environment path set
+ C:\Program Files\MongoDB\Server\5.0\bin
+ 
+ service>MongoDB Server (MOngoDB) do start
+
+ cmd run as administrator
+ mongo		// run mongo
+ show dbs	// total db show 
+ db		// collection free db
+ use myNewDatabase //create database and select
+ db.myCollection.insertOne({x:1});
+ db.myCollection.insertMany([{},{}]);
+ db.myCollection.findOne() // pretty() not working
+
+
+=============================
+
+
+const mongoose = require("mongoose");
+
+const userSchema=mongoose.Schema({
+    name:{
+        type:String,
+        required:true,
+    },
+    age:Number
+})
+
+module.exports=mongoose.model("User",userSchema);
+
+// module.exports=userSchema;
+
+=======================
+
+const userSchema = require('../models/user.model.schema');
+
+
+exports.createData=("/",async(req,res)=>{
+    const response=await new userSchema({
+        name:req.body.name,
+        age:req.body.age,
+    }).save();
+
+    res.status(200).send(response);
+});
+
+
+================
+
+db.products.find({category:'smartPhone'}).pritty().limit(1).skip(1)
+db.products.insertMany([{name:'san',id:222},{name:'amit',id:33}])
+db.products.updateMany({name:'iPhone 10'},{$set:{price:1200}})
+db.products.deleteMany({category:'notebook'})

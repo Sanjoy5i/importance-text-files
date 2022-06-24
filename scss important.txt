@@ -1,0 +1,144 @@
+// Note :  scss file ultimate compiler css file.
+// For it ( Live sass compile ) extention install. Work time ( Watch sass ) cleck.
+// _reset.scss mean it scss file do not compile. _ it is partial.
+
+@import "reset";                       // import reset.scss                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+
+$headerColor:#ffab73;               // SASS variables
+$mainColor:#ffd384;
+$footerColor:#ffaec0;
+$paraSize:15px;
+
+                                    // Nesting CSS Rules
+header {
+    padding: 40px;
+    background-color: $headerColor;
+
+    nav {
+        margin-top: 15px;
+
+        ul {
+            list-style-type: none;
+
+            li {
+                display: inline-block;
+                margin: 0 15px;
+                a {
+                    display: inline-block;
+                    color: white;
+                    text-decoration: none;
+                }
+                a:hover {
+                    background-color: gray;
+                    font-size: 20px;
+                }
+            }
+
+        }
+    }
+}
+
+@mixin para-style($fSize, $tAlign, $color) {             // @mixin holds reuseable code and we can implement that code useing @include.
+    font-size: $fSize;
+    text-align: $tAlign;
+    color: $color;
+}
+
+.btn {
+    padding: 15px, 45px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    color: green;
+}
+
+.btn-download {
+    color: red;
+    @extend .btn;               // @extend and inheritance.
+}
+
+
+
+main {
+    padding: 100px;
+    background-color: $mainColor;
+    font-size: $paraSize;
+
+    p {
+        @include para-style(16px, justify, blue);      // perameter pass
+    }
+}
+
+footer {
+    padding: 10px;
+    background-color: $footerColor;
+}
+
+
+@mixin setFontSize($value) {                // @ else @else if @else
+    @if $value==small {
+        font-size: 12px;
+    }
+
+    @else if $value==medium {
+        font-size: 16px;
+    }
+
+    @else if $value==large {
+        font-size: 20px;
+    }
+
+    @else {
+        font-size: none;
+    }
+}
+
+.pera {
+    @include setFontSize(large);
+}
+
+
+
+[class*="col-"],[class*="nCol-"]{       // col- and nCol- do the all class work.
+    float: left;
+}
+
+.row::after{
+    clear: both;
+    content: "";
+    display: table;
+}
+
+// .col-x {width: 100%/12 * x}
+
+@for $i from 1 through 12 {         // 1 through 10 mean 1--10 , 1 to 10 mean 1--9 
+    .col-#{$i} {                    // .col-#{$i} mean .col-1,.col-2,.col-3....
+        width: 100%/12 * $i;
+    }
+}
+
+$j:1;
+@while $j <= 12  {
+    .nCol-#{$j}{
+        width:100%/12 * $j;
+    }
+    $j:$j+1;
+}
+
+
+
+@each $color in red,green,blue,black{ 
+    .#{$color}-text{           // .#{$color}-text mean .red-text, .green-text ...
+        color:$color;
+    }
+}
+
+$colors:(a:red,b:green,c:blue,d:black);        
+
+@each $key, $color in $colors{                 // one by one value accapt $color variable from $colors variable.
+    .#{$color}-bg-text{                       // .#{$color}-bg-text mean .red-bg-text ...
+        background-color:$color;
+    }
+}
+
+

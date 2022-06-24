@@ -1,0 +1,27 @@
+only vanila javascript
+update font propertice  , rem based
+update form
+custom svg library
+Enhanced grid system        gater based
+Dropped support for internet explorer 10 & 11
+
+<!-- .container>.row>.col-md-12.mt-5>ol.breadcrumb>li.accordion-item -->
+
+Breakpoints
+===========
+x small                     < 576 px
+Small               sm      >=576 px
+Medium              md      >=768 px
+Large               Lg      >=992 px
+Extra Large         XL      >=1200 px
+Extra Extra Large   xxL     >=1400 px
+
+
+Container Breakpoints
+=====================
+x small                     < 100 %
+Small               sm      >=540 px
+Medium              md      >=720 px
+Large               Lg      >=960 px
+Extra Large         XL      >=1140 px
+Extra Extra Large   xxL     >=1320 px

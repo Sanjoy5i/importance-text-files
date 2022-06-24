@@ -1,0 +1,51 @@
+16px = 1 em
+
+
+
+Line tag
+=========
+<span></span>
+<kbd></kbd>
+<samp></samp>
+<var></var>
+<sup></sup>
+<a href=""></a>
+============
+
+
+[attribute="value"]
+[target]
+[targer="_blank"]
+[title~=top]	  top word / word top word / word top.
+[class|=top]	  top-/top-word start e thakte hobe.
+[class^=top]	  top/topword start e thakte hobe.
+[class$=top]	  top/wordtop end e thakte hobe.
+[class*=top]	  top je kono jayjay thakley holo.
+
+
+
+translate(20px); X / left form right
+translateX(20px); left form right
+translateY(20px); top form bottom
+translateZ(20px);
+translate(X,Y);
+
+rotate(20deg); Z / left-top-right
+rotateX(20deg); top to bottom
+rotateY(20deg); left to right
+rotateZ(20deg); left-top-right
+
+scale(2); left , top , right , bottom
+scaleX(2); left and right
+scaleY(2); top and bottom
+scaleZ(3);
+scale(X,Y);
+
+skewX(30deg); left and right
+skewY(30deg); top and bottom
+skew(X,Y);
+
+transform: matrix(scaleX, skewY, skewX, scaleY, translateX, translateY);
+
+
+flex: flex-grow flex-shrink flex-basis;

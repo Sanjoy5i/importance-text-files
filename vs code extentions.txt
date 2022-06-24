@@ -1,0 +1,31 @@
+Auto Rename tag
+
+Auto Complete tag
+
+Path Autocomplete
+
+Emoji Snippets
+
+Dracula Offical
+
+Andromeda
+
+Better Comment
+
+Bracket Pair Colorizer
+
+Css Peek
+
+ES7 React
+
+express-faster
+
+HTML CSS Support
+
+Live Server
+
+Meterial Icon Theme
+
+Mongo Snippets
+
+Prettier		// setting > formeter > auto save

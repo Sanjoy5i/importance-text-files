@@ -1,0 +1,94 @@
+//===============
+        //--Veriable
+
+        var v=10;       // Global and Function scope mentain. Can re-declared.
+        let l=10;       // Scope lebel. Can not re-declared.
+        const l=10;     // Scope lebel. Can not re-declared. Can not re-assigned.
+
+
+
+//===============
+        //--Basic
+        r= a===b;       // type & value equal than true.
+
+
+//===============
+
+        //--Object
+        var car=new Object();
+        var car={type:"BMW",model:"323",color:"white"};
+        car.type="BMW";
+
+
+        //--Array
+        var arr= new Array("A","D","C");
+        var arr=["A","D","C"];
+        arr[1]="E";
+
+//==============
+
+        //--Methods
+        console.log(arr);  // A,E,C
+        arr.sort();    // A,C,E
+        var len = arr.length;    // length property
+
+        
+        
+         delete arr[3];  //Deleting Elements
+
+         arr.sort(function(a, b){return a - b});    // number arr sorting assending
+
+//===============
+        
+        function x(){
+            return 0;
+        }
+
+        // ES5
+        var x = function(x, y) {
+         return x * y;
+
+        // ES6
+        const x = (x, y) => x * y;    //auto return
+
+        // same ES6
+        var fn=()=>{
+            return 0;
+        }
+
+        
+        console.log(fn());
+
+//================
+
+//--- Date....
+
+var d = new Date();
+var d = new Date(year, month, day, hours, minutes, seconds, milliseconds)
+var d = new Date(milliseconds);
+var d = new Date(date string);   // Date("October 13, 2014 11:13:00");
+
+var d = new Date();
+document.getElementById("demo").innerHTML = d.toString();
+document.getElementById("demo").innerHTML = d.toUTCString();
+document.getElementById("demo").innerHTML = d.toDateString();
+
+Tue Sep 15 2020 10:41:35 GMT+0600 (Bangladesh Standard Time)
+Tue, 15 Sep 2020 04:42:26 GMT
+Tue Sep 15 2020
+
+
+document.write(new Date().getTime());   // Inside Date Object create.
+
+
+//======================
+//--- Math...
+
+Math.sin(90 * Math.PI / 180);     // returns 1 (the sine of 90 degrees)
+
+
+//=============================
+//---Class...
+
+constructor    // can not return value;
+

@@ -1,0 +1,33 @@
+node install
+cd Lesson-1
+node index.js
+
+
+
+Local Module Use
+================
+1. exports.anyName=functionName;                // export   // File1                   
+2. const anyName = require('packageName');      // import   // File2
+
+
+
+Built in Module Use
+===================
+const anyName = require('packageName');
+
+
+
+External Module Use
+===================
+
+1. npm init  or  npm init -y    (terminal use)
+2. npm install package name     (terminal use)
+3. const anyName = require('packageName');
+
+
+Packages
+========
+
+1. npm install nodemon             // server auto run package
+2. package.json  modify:-  "scripts" inside   "start": "nodemon index.js" 
+2. npm start                   // server auto run

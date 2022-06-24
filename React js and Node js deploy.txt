@@ -1,0 +1,15 @@
+===React js free deploy===
+
+1. react app build	//npm build
+2. git create repository
+3. git init > git add . >git commit "" > git remote add origin -- > git push -u origin master
+4. netlify wrbsite > new site from git > then step > deploy > published
+
+
+===node js free deploy===
+
+1. Procfile name ekti file create korte hobe.
+2. const PORT=process.env.PORT;
+3. .gitignore file e node_modules likte hobe.
+4. heroku website e giye create app theke ekti app create korte hobe. then instruction follow...
+4. update korte > git add . > git commit "" > git push heroku master
